@@ -1,0 +1,87 @@
+{% load static %} {% static "images" as baseUrl%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'  %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.css' %}">
+    <!-- <link rel="stylesheet" href="{%static 'css/bootstrap.min.css.map'  %}"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c4e0f4710c.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+    <section class="intro" style=" background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url({{data.bgimage.url}});
+    background-size: cover;
+    background-repeat: no-repeat;">
+
+        <nav id="nav">
+            <button class="remove" id="remove">
+                <i class="fa-solid fa-x fa-lg" style="color: #000000;"></i>
+            </button>
+            <div class=" logo ">
+                <p> <span style="color: red;"> Critical </span>Eye</p>
+            </div>
+            <ul>
+                <li>
+                    <a href="{% url 'aboutus' %} ">about</a></li>
+                <li>
+                    <a href="{% url 'blogs' %} ">blogs</a></li>
+                <li>
+                    <a href="products.html ">support</a></li>
+                <li>
+                    <a href="#about ">contact</a></li>
+            </ul>
+
+        </nav>
+        <button id="toggle-button">
+         <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i>
+        </button>
+
+
+
+        <div class="headertitle ">
+            <div class="verticallinediv ">
+                <h1>{{data.titleBreak}}</h1>
+            </div>
+            <div class="preview ">
+                <p> {{data.content|safe|truncatechars:400}}</p>
+            </div>
+        </div>
+        <div class="button ">
+            <a href="{% url 'blogpost1' %} " class="title-link "><button class="button-joinus ">explore</button> </a>
+        </div>
+        <div class="attribution ">
+            <a href="https://{{data.hyperlink}} "> source: {{data.pic_owner}}</a>
+        </div>
+
+    </section>
+
+    <script>
+        var nav = document.getElementById('nav');
+        var toggleButton = document.getElementById('toggle-button');
+        var removeButton = document.getElementById('remove');
+        // Add event listener to toggle button
+        toggleButton.addEventListener("click", () => {
+            nav.classList.toggle("open");
+        });
+        removeButton.addEventListener("click", () => {
+            nav.classList.remove("open");
+        });
+    </script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+
+</body>
+
+
+</html>

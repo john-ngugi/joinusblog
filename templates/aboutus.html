@@ -1,0 +1,122 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'aboutus.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'  %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.css' %}">
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css.map'  %}">
+    <script src="https://kit.fontawesome.com/c4e0f4710c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="wrapper">
+        <div class="body">
+            <nav id="nav">
+                <button class="remove" id="remove">
+                <i class="fa-solid fa-x fa-lg" style="color: #000000;"></i>
+            </button>
+                <div class=" logo ">
+                    <p> <span style="color: red;"> Critical </span>Eye</p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="{% url 'intro'%}">home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'blogs' %}">blogs</a></li>
+                    <li>
+
+                        <li>
+                            <a href="products.html">support</a></li>
+                        <li>
+                            <a href="#about">contact</a></li>
+                </ul>
+            </nav>
+            <button id="toggle-button">
+         <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i>
+        </button>
+
+            <div class="content">
+                <img class="meimg" src="{% static 'images/images (6).jpeg' %}" alt="img here">
+                <p> <i class="fa-solid fa-quote-left"></i> <br> I created protest wall to reach out to people who i feel their voices are not heard enough. The people who want to echo their cries to the world but have no free platform to do so <br>Protest
+                    Wall ais to change the way people ingested information about social , cultural economic and word issues. protest wall is essentially a place to raise my thoughts and those of the people. We aim to change opinions, thoughts and how
+                    to act on these issues. We are trying to understand what climate change is and amidist that alot of miscommunication, myths and un factord thought comes in. My goal with protest wall is to enssure the world has the right information
+                    and actually hears what the common person goes through daily. <br> <span style="float: right;"> <i class="fa-solid fa-quote-right"></i> </span></p>
+
+            </div>
+
+            <footer class="footer">
+                <div class="footercontent">
+
+                    <p style="text-transform:uppercase; color: white;font-family: sans-serif;font-weight: bold;font-size: 25px;letter-spacing: 1, 5px;margin-top:100px">protest wall</p>
+                    <div class="links">
+                        <div style="display:inline-flex;justify-content: space-around;">
+                            <ul class="navlinks1">
+                                <p style="color: white;font-size:23px;">Quick links</p>
+                                <li>
+                                    <a href="{% url 'intro'%} "> > home</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blogs' %}">> blogs</a></li>
+                                <li>
+                                    <li>
+                                        <a href="{% url 'aboutus' %} ">> about</a></li>
+                                    <li>
+                                        <a href="products.html ">> support</a></li>
+                                    <li>
+                                        <a href="#about">> contact</a></li>
+                            </ul>
+                            <ul style="list-style: none;margin-left:50px ">
+                                <p style="color: white;font-size:23px;">Socials</p>
+                                <li class="twitter">
+                                    <a href="{% url 'intro'%} "><i class="fa-brands fa-twitter "></i> twitter</a>
+                                </li>
+                                <li class="instagram">
+                                    <a href="{% url 'blogs' %} "><i class="fa-brands fa-instagram "></i><span class="instaname"> instagram</span></a></li>
+                                <li>
+                                    <li class="linkedin">
+                                        <a href="{% url 'aboutus' %} "><i class="fa-brands fa-linkedin"></i> linkedin</a></li>
+                                    <li class="reddit">
+                                        <a href="products.html "><i class="fa-brands fa-reddit "></i> reddit</a></li>
+                                    <li class="whatsapp">
+                                        <a href="#about "><i class="fa-brands fa-whatsapp "></i> whatsapp</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="joinus " style="text-align:center;color:white; ">
+                        <p style="text-transform:uppercase; ">join us</p>
+                        <div style="display:inline; " class="joinus1">
+                            <label for="join-footer " id="input-label ">enter email:</label>
+                            <input type="email " name="joinus " id="join-footer " placeholder="exampleemail@wall.com ">
+                            <a href="# "><button class="submit-btn">submit</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width:100vw; margin-top:50px; ">
+                    <p style="text-align:center;color:white ">designed by <a href="# " style="text-transform:uppercase; ">john ngugi</a></p>
+                </div>
+            </footer>
+        </div>
+    </section>
+    <script>
+        var nav = document.getElementById('nav');
+        var toggleButton = document.getElementById('toggle-button');
+        var removeButton = document.getElementById('remove');
+        // Add event listener to toggle button
+        toggleButton.addEventListener("click", () => {
+            nav.classList.toggle("open");
+        });
+        removeButton.addEventListener("click", () => {
+            nav.classList.remove("open");
+        });
+    </script>
+</body>
+
+</html>
