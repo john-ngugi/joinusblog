@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Tiro+Devanagari+Hindi&display=swap');
+.body {}
+
+.wrapper {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(/static/images/aboutforrest1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.meimg {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 10px
+}
+
+nav {
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    padding: 0px 100px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+nav .logo {
+    font-size: 30px;
+    letter-spacing: 1, 5px;
+}
+
+nav .logo p {
+    float: left;
+    color: white;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 0px 32px;
+    font-family: sans-serif;
+}
+
+nav ul li a:hover {
+    color: rgb(14, 188, 191);
+    text-decoration: none;
+}
+
+.footer {
+    width: 100vw;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.footercontent {
+    display: inline-flex;
+    width: 100vw;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.links {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.links ul {
+    list-style: none;
+}
+
+.links ul li a {
+    color: white;
+    font-size: 20px;
+}
+
+.links ul li a:hover {
+    color: rgb(14, 188, 191);
+    text-decoration: none;
+}
+
+.submit-btn {
+    color: white;
+    background-color: red;
+    outline: none;
+    border-color: red;
+}
+
+.submit-btn:hover {
+    background-color: orangered;
+}
+
+footer {
+    /*  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(/static/images/megaphoneintro.jpg);*/
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    border-radius: 50px;
+    height: 600px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    background-color: #6664643c;
+    backdrop-filter: blur(20px);
+}
+
+.content p {
+    font-size: 18px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10px;
+}
+
+.instagram a i {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+    border-radius: 30px;
+}
+
+.instaname:hover {
+    color: #fd5949;
+    text-decoration: none;
+}
+
+.twitter a i {
+    color: rgb(14, 188, 191);
+}
+
+.twitter a:hover {
+    color: rgb(14, 188, 191);
+    text-decoration: none;
+}
+
+.linkedin a i {
+    color: blue;
+}
+
+.linkedin a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+.reddit a i {
+    color: #FF4301;
+}
+
+.reddit a:hover {
+    color: #FF4301;
+    text-decoration: none;
+}
+
+.whatsapp a i {
+    color: #25d366;
+}
+
+.whatsapp a:hover {
+    color: #25d366;
+}
+
+.navlinks1 li a:hover {
+    color: rgb(14, 188, 191);
+}
+
+.joinus1 label {
+    font-size: 18px;
+    font-family: 'poppins', sans-serif;
+    color: white;
+    right: 0%;
+}
+
+.joinus {
+    font-family: 'poppins', sans-serif;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+.joinus p {
+    font-size: 23px;
+}
+
+.joinus1 input::placeholder {
+    font-size: 14px;
+}
+
+.remove {
+    display: none;
+}
+
+#toggle-button {
+    float: right;
+    margin-left: 30%;
+    display: none;
+    position: fixed;
+}
+
+@media screen and (max-width:768px) {
+    #nav {
+        width: 100%;
+        height: 55px;
+        line-height: 55px;
+        padding: 0px 30px;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+    }
+    #nav ul {
+        float: right;
+        display: flex;
+        flex-direction: column;
+    }
+    #nav ul li.open {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin-right: 5%;
+    }
+    nav ul li a {
+        color: #030303;
+        text-decoration: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        padding: 0px 32px;
+        font-family: sans-serif;
+    }
+    #nav ul li a:hover {
+        color: rgb(251, 92, 0);
+        text-decoration: none;
+    }
+    nav .logo {
+        display: none;
+    }
+    .remove {
+        display: flex;
+        background-color: transparent;
+        height: 40px;
+        width: 40px;
+        align-items: center;
+        border: none;
+        outline: none;
+    }
+    .remove i:hover {
+        color: rgb(251, 92, 0);
+    }
+    #toggle-button {
+        display: flex;
+        float: right;
+        margin-left: 75%;
+        background-color: transparent;
+        padding-top: 2%;
+        margin-top: 4%;
+        height: 50px;
+        border: none;
+        outline: none;
+    }
+    #toggle-button i {
+        margin-top: 4%;
+    }
+    #nav {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        /* Adjust the width to match the navigation width */
+        width: 250px;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+    }
+    #nav.open {
+        right: 0;
+    }
+    .footercontent {
+        display: block;
+        width: 100vw;
+        margin-top: 50px;
+    }
+    .links {
+        display: block;
+    }
+    .links ul li a {
+        color: white;
+        font-size: 15px;
+        font-family: 'poppins', sans-serif;
+    }
+    .joinus p {
+        font-size: 18px;
+    }
+    .footer {
+        width: 100vw;
+        height: 600px;
+        /* bottom: 0; */
+    }
+    nav .logo {
+        font-size: 25px;
+        letter-spacing: 1, 5px;
+    }
+    .button-joinus {
+        position: absolute;
+        left: 25px;
+        width: 300px;
+        height: 45px;
+        margin-top: 5px;
+        background-color: transparent;
+        border-radius: 250px;
+        border-color: #ffff;
+        transition: margin-top ease 0.2s;
+        transition: all 0.5s;
+        cursor: pointer;
+        color: #FFFFFF;
+    }
+    .attribution a {
+        text-decoration: none;
+        font-size: 12px;
+        margin-right: 40px;
+        color: rgb(251, 92, 0);
+    }
+    .attribution a:hover {
+        text-decoration: none;
+    }
+    nav .logo p {
+        float: left;
+        color: white;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+    .title {
+        margin-top: 0px;
+        /*position: relative;*/
+        margin-left: 10px;
+        /*border-radius: 100px;*/
+    }
+    .title h1 {
+        margin-top: 130px;
+        color: white;
+        font-size: 50px;
+        font-family: 'Tiro Devanagari Hindi', serif;
+        text-transform: capitalize;
+    }
+    .content {
+        border-radius: 50px;
+        height: 700px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 90px;
+        background-color: #6664643c;
+        backdrop-filter: blur(20px);
+    }
+    .content p {
+        font-size: 15px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 10px;
+    }
+    .meimg {
+        height: 150px;
+        width: 150px;
+        border-radius: 100px;
+        margin-left: 30%;
+        margin-right: 10%;
+        margin-top: 10px
+    }
+}
