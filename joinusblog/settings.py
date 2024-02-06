@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'joinusblog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'protest wall',
+        'NAME': 'railway',
         'USER':'postgres',
-        'PASSWORD':'john0735880407',
-        'HOST':'localhost',
+        'PASSWORD':'Gg25-G5B531A363AaGgA5-gC5ABF662D',
+        'HOST':'monorail.proxy.rlwy.net',
     }
 }
 
